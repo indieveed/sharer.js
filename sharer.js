@@ -46,6 +46,19 @@
                         params = {u: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
+                    facebookFeed: function () {
+                        shareUrl = 'https://www.facebook.com/dialog/feed';
+                        params = {
+                            'app_id': that.getValue('app_id'),
+                            'redirect_uri': that.getValue('redirect_uri'),
+                            'link': that.getValue('link'),
+                            'picture': that.getValue('picture'),
+                            'caption': that.getValue('caption'),
+                            'description': that.getValue('description'),
+                            'display': 'popup'
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
                     googleplus: function () {
                         shareUrl = 'https://plus.google.com/share';
                         params = {url: that.getValue('url')};
